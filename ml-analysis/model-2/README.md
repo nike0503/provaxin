@@ -5,8 +5,8 @@ We used the set "64-Bit Windows PE files" (997 samples) from VirusShare for our 
 We have also provided 6 examples of binary files that were shown in the demo.
 
 To extract the features from binary files, run:
-python extract.py
+```python extract.py```
 
 To run the KNN model, run:
-python run_KNN.py
+```python run_KNN.py```
 
