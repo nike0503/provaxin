@@ -1,0 +1,14 @@
+#!/bin/bash
+
+CORE_PATH="/mnt/mewis/Academics/malware_analyis_CS658A/pronpm/core"
+PACKAGE_NAME=$2
+
+npm install $PACKAGE_NAME
+
+PACKAGE_NAME=${PACKAGE_NAME%#*}
+PACKAGE_NAME=${PACKAGE_NAME##*/}
+INDEX_FILE_PATH=$(realpath "node_modules/$PACKAGE_NAME/index.js")
+
+cd $CORE_PATH
+
+node index.js $INDEX_FILE_PATH

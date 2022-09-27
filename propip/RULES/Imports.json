@@ -1,0 +1,467 @@
+{
+    "Import": [
+        {
+            "name": "import_telnetlib",
+            "id": "B401",
+            "cwe": 319,
+            "message": "A telnet-related module is being imported.  Telnet is considered insecure. Use SSH or some other encrypted protocol.",
+            "qualnames": [
+                "telnetlib"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_ftplib",
+            "id": "B402",
+            "cwe": 319,
+            "message": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+            "qualnames": [
+                "ftplib"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_pickle",
+            "id": "B403",
+            "cwe": 502,
+            "message": "Consider possible security implications associated with {name} module.",
+            "qualnames": [
+                "pickle",
+                "cPickle",
+                "dill",
+                "shelve"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_subprocess",
+            "id": "B404",
+            "cwe": 78,
+            "message": "Consider possible security implications associated with the subprocess module.",
+            "qualnames": [
+                "subprocess"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_etree",
+            "id": "B405",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.etree.cElementTree",
+                "xml.etree.ElementTree"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_sax",
+            "id": "B406",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.sax"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_expat",
+            "id": "B407",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.dom.expatbuilder"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_minidom",
+            "id": "B408",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.dom.minidom"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_pulldom",
+            "id": "B409",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.dom.pulldom"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_lxml",
+            "id": "B410",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package.",
+            "qualnames": [
+                "lxml"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xmlrpclib",
+            "id": "B411",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Use defused.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.",
+            "qualnames": [
+                "xmlrpclib"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_httpoxy",
+            "id": "B412",
+            "cwe": 284,
+            "message": "Consider possible security implications associated with {name} module.",
+            "qualnames": [
+                "wsgiref.handlers.CGIHandler",
+                "twisted.web.twcgi.CGIScript",
+                "twisted.web.twcgi.CGIDirectory"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_pycrypto",
+            "id": "B413",
+            "cwe": 327,
+            "message": "The pyCrypto library and its module {name} are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library.",
+            "qualnames": [
+                "Crypto.Cipher",
+                "Crypto.Hash",
+                "Crypto.IO",
+                "Crypto.Protocol",
+                "Crypto.PublicKey",
+                "Crypto.Random",
+                "Crypto.Signature",
+                "Crypto.Util"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_pyghmi",
+            "id": "B415",
+            "cwe": 319,
+            "message": "An IPMI-related module is being imported. IPMI is considered insecure. Use an encrypted protocol.",
+            "qualnames": [
+                "pyghmi"
+            ],
+            "level": "HIGH"
+        }
+    ],
+    "ImportFrom": [
+        {
+            "name": "import_telnetlib",
+            "id": "B401",
+            "cwe": 319,
+            "message": "A telnet-related module is being imported.  Telnet is considered insecure. Use SSH or some other encrypted protocol.",
+            "qualnames": [
+                "telnetlib"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_ftplib",
+            "id": "B402",
+            "cwe": 319,
+            "message": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+            "qualnames": [
+                "ftplib"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_pickle",
+            "id": "B403",
+            "cwe": 502,
+            "message": "Consider possible security implications associated with {name} module.",
+            "qualnames": [
+                "pickle",
+                "cPickle",
+                "dill",
+                "shelve"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_subprocess",
+            "id": "B404",
+            "cwe": 78,
+            "message": "Consider possible security implications associated with the subprocess module.",
+            "qualnames": [
+                "subprocess"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_etree",
+            "id": "B405",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.etree.cElementTree",
+                "xml.etree.ElementTree"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_sax",
+            "id": "B406",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.sax"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_expat",
+            "id": "B407",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.dom.expatbuilder"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_minidom",
+            "id": "B408",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.dom.minidom"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_pulldom",
+            "id": "B409",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.dom.pulldom"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_lxml",
+            "id": "B410",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package.",
+            "qualnames": [
+                "lxml"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xmlrpclib",
+            "id": "B411",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Use defused.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.",
+            "qualnames": [
+                "xmlrpclib"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_httpoxy",
+            "id": "B412",
+            "cwe": 284,
+            "message": "Consider possible security implications associated with {name} module.",
+            "qualnames": [
+                "wsgiref.handlers.CGIHandler",
+                "twisted.web.twcgi.CGIScript",
+                "twisted.web.twcgi.CGIDirectory"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_pycrypto",
+            "id": "B413",
+            "cwe": 327,
+            "message": "The pyCrypto library and its module {name} are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library.",
+            "qualnames": [
+                "Crypto.Cipher",
+                "Crypto.Hash",
+                "Crypto.IO",
+                "Crypto.Protocol",
+                "Crypto.PublicKey",
+                "Crypto.Random",
+                "Crypto.Signature",
+                "Crypto.Util"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_pyghmi",
+            "id": "B415",
+            "cwe": 319,
+            "message": "An IPMI-related module is being imported. IPMI is considered insecure. Use an encrypted protocol.",
+            "qualnames": [
+                "pyghmi"
+            ],
+            "level": "HIGH"
+        }
+    ],
+    "Call": [
+        {
+            "name": "import_telnetlib",
+            "id": "B401",
+            "cwe": 319,
+            "message": "A telnet-related module is being imported.  Telnet is considered insecure. Use SSH or some other encrypted protocol.",
+            "qualnames": [
+                "telnetlib"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_ftplib",
+            "id": "B402",
+            "cwe": 319,
+            "message": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+            "qualnames": [
+                "ftplib"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_pickle",
+            "id": "B403",
+            "cwe": 502,
+            "message": "Consider possible security implications associated with {name} module.",
+            "qualnames": [
+                "pickle",
+                "cPickle",
+                "dill",
+                "shelve"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_subprocess",
+            "id": "B404",
+            "cwe": 78,
+            "message": "Consider possible security implications associated with the subprocess module.",
+            "qualnames": [
+                "subprocess"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_etree",
+            "id": "B405",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.etree.cElementTree",
+                "xml.etree.ElementTree"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_sax",
+            "id": "B406",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.sax"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_expat",
+            "id": "B407",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.dom.expatbuilder"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_minidom",
+            "id": "B408",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.dom.minidom"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xml_pulldom",
+            "id": "B409",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+            "qualnames": [
+                "xml.dom.pulldom"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_lxml",
+            "id": "B410",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package.",
+            "qualnames": [
+                "lxml"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "import_xmlrpclib",
+            "id": "B411",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Use defused.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.",
+            "qualnames": [
+                "xmlrpclib"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_httpoxy",
+            "id": "B412",
+            "cwe": 284,
+            "message": "Consider possible security implications associated with {name} module.",
+            "qualnames": [
+                "wsgiref.handlers.CGIHandler",
+                "twisted.web.twcgi.CGIScript",
+                "twisted.web.twcgi.CGIDirectory"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_pycrypto",
+            "id": "B413",
+            "cwe": 327,
+            "message": "The pyCrypto library and its module {name} are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library.",
+            "qualnames": [
+                "Crypto.Cipher",
+                "Crypto.Hash",
+                "Crypto.IO",
+                "Crypto.Protocol",
+                "Crypto.PublicKey",
+                "Crypto.Random",
+                "Crypto.Signature",
+                "Crypto.Util"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "import_pyghmi",
+            "id": "B415",
+            "cwe": 319,
+            "message": "An IPMI-related module is being imported. IPMI is considered insecure. Use an encrypted protocol.",
+            "qualnames": [
+                "pyghmi"
+            ],
+            "level": "HIGH"
+        }
+    ]
+}

@@ -1,0 +1,285 @@
+{
+    "Call": [
+        {
+            "name": "pickle",
+            "id": "B301",
+            "cwe": 502,
+            "message": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+            "qualnames": [
+                "pickle.loads",
+                "pickle.load",
+                "pickle.Unpickler",
+                "cPickle.loads",
+                "cPickle.load",
+                "cPickle.Unpickler",
+                "dill.loads",
+                "dill.load",
+                "dill.Unpickler",
+                "shelve.open",
+                "shelve.DbfilenameShelf"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "marshal",
+            "id": "B302",
+            "cwe": 502,
+            "message": "Deserialization with the marshal module is possibly dangerous.",
+            "qualnames": [
+                "marshal.load",
+                "marshal.loads"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "md5",
+            "id": "B303",
+            "cwe": 327,
+            "message": "Use of insecure MD2, MD4, MD5, or SHA1 hash function.",
+            "qualnames": [
+                "hashlib.md4",
+                "hashlib.md5",
+                "hashlib.sha",
+                "hashlib.sha1",
+                "Crypto.Hash.MD2.new",
+                "Crypto.Hash.MD4.new",
+                "Crypto.Hash.MD5.new",
+                "Crypto.Hash.SHA.new",
+                "Cryptodome.Hash.MD2.new",
+                "Cryptodome.Hash.MD4.new",
+                "Cryptodome.Hash.MD5.new",
+                "Cryptodome.Hash.SHA.new",
+                "cryptography.hazmat.primitives.hashes.MD5",
+                "cryptography.hazmat.primitives.hashes.SHA1"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "ciphers",
+            "id": "B304",
+            "cwe": 327,
+            "message": "Use of insecure cipher {name}. Replace with a known secure cipher such as AES.",
+            "qualnames": [
+                "Crypto.Cipher.ARC2.new",
+                "Crypto.Cipher.ARC4.new",
+                "Crypto.Cipher.Blowfish.new",
+                "Crypto.Cipher.DES.new",
+                "Crypto.Cipher.XOR.new",
+                "Cryptodome.Cipher.ARC2.new",
+                "Cryptodome.Cipher.ARC4.new",
+                "Cryptodome.Cipher.Blowfish.new",
+                "Cryptodome.Cipher.DES.new",
+                "Cryptodome.Cipher.XOR.new",
+                "cryptography.hazmat.primitives.ciphers.algorithms.ARC4",
+                "cryptography.hazmat.primitives.ciphers.algorithms.Blowfish",
+                "cryptography.hazmat.primitives.ciphers.algorithms.IDEA"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "cipher_modes",
+            "id": "B305",
+            "cwe": 327,
+            "message": "Use of insecure cipher mode {name}.",
+            "qualnames": [
+                "cryptography.hazmat.primitives.ciphers.modes.ECB"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "mktemp_q",
+            "id": "B306",
+            "cwe": 377,
+            "message": "Use of insecure and deprecated function (mktemp).",
+            "qualnames": [
+                "tempfile.mktemp"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "eval",
+            "id": "B307",
+            "cwe": 78,
+            "message": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+            "qualnames": [
+                "eval"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "mark_safe",
+            "id": "B308",
+            "cwe": 79,
+            "message": "Use of mark_safe() may expose cross-site scripting vulnerabilities and should be reviewed.",
+            "qualnames": [
+                "django.utils.safestring.mark_safe"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "urllib_urlopen",
+            "id": "B310",
+            "cwe": 22,
+            "message": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+            "qualnames": [
+                "urllib.urlopen",
+                "urllib.request.urlopen",
+                "urllib.urlretrieve",
+                "urllib.request.urlretrieve",
+                "urllib.URLopener",
+                "urllib.request.URLopener",
+                "urllib.FancyURLopener",
+                "urllib.request.FancyURLopener",
+                "urllib2.urlopen",
+                "urllib2.Request",
+                "six.moves.urllib.request.urlopen",
+                "six.moves.urllib.request.urlretrieve",
+                "six.moves.urllib.request.URLopener",
+                "six.moves.urllib.request.FancyURLopener"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "random",
+            "id": "B311",
+            "cwe": 330,
+            "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+            "qualnames": [
+                "random.random",
+                "random.randrange",
+                "random.randint",
+                "random.choice",
+                "random.choices",
+                "random.uniform",
+                "random.triangular"
+            ],
+            "level": "LOW"
+        },
+        {
+            "name": "telnetlib",
+            "id": "B312",
+            "cwe": 319,
+            "message": "Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.",
+            "qualnames": [
+                "telnetlib.*"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "xml_bad_cElementTree",
+            "id": "B313",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "qualnames": [
+                "xml.etree.cElementTree.parse",
+                "xml.etree.cElementTree.iterparse",
+                "xml.etree.cElementTree.fromstring",
+                "xml.etree.cElementTree.XMLParser"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "xml_bad_ElementTree",
+            "id": "B314",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "qualnames": [
+                "xml.etree.ElementTree.parse",
+                "xml.etree.ElementTree.iterparse",
+                "xml.etree.ElementTree.fromstring",
+                "xml.etree.ElementTree.XMLParser"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "xml_bad_expatreader",
+            "id": "B315",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "qualnames": [
+                "xml.sax.expatreader.create_parser"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "xml_bad_expatbuilder",
+            "id": "B316",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "qualnames": [
+                "xml.dom.expatbuilder.parse",
+                "xml.dom.expatbuilder.parseString"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "xml_bad_sax",
+            "id": "B317",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "qualnames": [
+                "xml.sax.parse",
+                "xml.sax.parseString",
+                "xml.sax.make_parser"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "xml_bad_minidom",
+            "id": "B318",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "qualnames": [
+                "xml.dom.minidom.parse",
+                "xml.dom.minidom.parseString"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "xml_bad_pulldom",
+            "id": "B319",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "qualnames": [
+                "xml.dom.pulldom.parse",
+                "xml.dom.pulldom.parseString"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "xml_bad_etree",
+            "id": "B320",
+            "cwe": 20,
+            "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function.",
+            "qualnames": [
+                "lxml.etree.parse",
+                "lxml.etree.fromstring",
+                "lxml.etree.RestrictedElement",
+                "lxml.etree.GlobalParserTLS",
+                "lxml.etree.getDefaultParser",
+                "lxml.etree.check_docinfo"
+            ],
+            "level": "MEDIUM"
+        },
+        {
+            "name": "ftplib",
+            "id": "B321",
+            "cwe": 319,
+            "message": "FTP-related functions are being called. FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+            "qualnames": [
+                "ftplib.*"
+            ],
+            "level": "HIGH"
+        },
+        {
+            "name": "unverified_context",
+            "id": "B323",
+            "cwe": 295,
+            "message": "By default, Python will create a secure, verified ssl context for use in such classes as HTTPSConnection. However, it still allows using an insecure context via the _create_unverified_context that  reverts to the previous behavior that does not validate certificates or perform hostname checks.",
+            "qualnames": [
+                "ssl._create_unverified_context"
+            ],
+            "level": "MEDIUM"
+        }
+    ]
+}

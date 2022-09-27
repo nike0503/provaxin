@@ -1,0 +1,111 @@
+{
+    "LOW": 3,
+    "MEDIUM": 2,
+    "HIGH": 2,
+    "1": [
+        {
+            "code": "import FILES.file1",
+            "report": {
+                "LOW": 3,
+                "MEDIUM": 2,
+                "HIGH": 2,
+                "2": [
+                    {
+                        "code": "import Crypto",
+                        "report": {
+                            "LOW": 0,
+                            "MEDIUM": 0,
+                            "HIGH": 0
+                        }
+                    }
+                ],
+                "3": [
+                    {
+                        "code": "import xml.sax",
+                        "cwe": 20,
+                        "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called.",
+                        "level": "LOW"
+                    }
+                ],
+                "5": [
+                    {
+                        "code": "import FILES.file2",
+                        "report": {
+                            "LOW": 0,
+                            "MEDIUM": 0,
+                            "HIGH": 2,
+                            "1": [
+                                {
+                                    "code": "import telnetlib",
+                                    "cwe": 319,
+                                    "message": "A telnet-related module is being imported.  Telnet is considered insecure. Use SSH or some other encrypted protocol.",
+                                    "level": "HIGH"
+                                }
+                            ],
+                            "2": [
+                                {
+                                    "code": "import ftplib",
+                                    "cwe": 319,
+                                    "message": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+                                    "level": "HIGH"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "6": [
+                    {
+                        "code": "import FILES.file3",
+                        "report": {
+                            "LOW": 2,
+                            "MEDIUM": 1,
+                            "HIGH": 0,
+                            "1": [
+                                {
+                                    "code": "import pickle",
+                                    "cwe": 502,
+                                    "message": "Consider possible security implications associated with {name} module.",
+                                    "level": "LOW"
+                                }
+                            ],
+                            "3": [
+                                {
+                                    "code": "import subprocess",
+                                    "cwe": 78,
+                                    "message": "Consider possible security implications associated with the subprocess module.",
+                                    "level": "LOW"
+                                }
+                            ],
+                            "8": [
+                                {
+                                    "code": "call pickle.load",
+                                    "cwe": 502,
+                                    "message": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+                                    "level": "MEDIUM"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "7": [
+                    {
+                        "code": "import FILES.file4",
+                        "report": {
+                            "LOW": 0,
+                            "MEDIUM": 0,
+                            "HIGH": 0
+                        }
+                    }
+                ],
+                "10": [
+                    {
+                        "code": "call xml.sax.expatreader.create_parser",
+                        "cwe": 20,
+                        "message": "Using {name} to parse untrusted XML data is known to be vulnerable to XML attacks. Replace {name} with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+                        "level": "MEDIUM"
+                    }
+                ]
+            }
+        }
+    ]
+}
